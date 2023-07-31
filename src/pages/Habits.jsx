@@ -30,7 +30,7 @@ export default function Habits(){
             <Navbar />
             <>
                 <h1>Meus hábitos</h1>
-                <img src={plus} onClick={() => setHidden(false)} />
+                <img data-test="habit-create-btn" src={plus} onClick={() => setHidden(false)} />
             </>
             <CreateHabit hidden={hidden} setHidden={setHidden} habits={habits} setHabits={setHabits} />
             {habits.length === 0 ? <p>Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!</p> : habits.map(h => <Habit key={h.id} id={h.id} name={h.name} days={h.days} />)}

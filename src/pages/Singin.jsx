@@ -35,6 +35,7 @@ export default function Singin(){
             <form onSubmit={cadastrar}>
 
                 <input 
+                data-test="email-input"
                 type='email' 
                 placeholder="email" 
                 value={email} onChange={e => setEmail(e.target.value)} 
@@ -42,6 +43,7 @@ export default function Singin(){
                 />
 
                 <input 
+                data-test="password-input"
                 type='password' 
                 placeholder="senha" 
                 value={senha} 
@@ -50,6 +52,7 @@ export default function Singin(){
                 />
 
                 <input 
+                data-test="user-name-input"
                 placeholder="nome"
                 value={nome} 
                 onChange={e => setNome(e.target.value)} 
@@ -57,17 +60,18 @@ export default function Singin(){
                 />
 
                 <input 
+                data-test="user-image-input"
                 placeholder="foto" 
                 value={foto} 
                 onChange={e => setFoto(e.target.value)} 
                 required 
                 />
 
-                <button type="submit">Cadastrar</button>
+                <button data-test="signup-btn" type="submit">Cadastrar</button>
 
             </form>
 
-            <Link to="/">Já tem uma conta? Faça login!</Link>
+            <Link data-test="login-link" to="/">Já tem uma conta? Faça login!</Link>
 
         </>
     )

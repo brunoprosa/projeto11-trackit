@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export default function WeekdaysH({i, days, weekday}){
     return(
-        <Weekday selecionado={days.includes(i)}>{weekday}</Weekday>
+        <Weekday  data-test="habit-day" selecionado={days.includes(i)}>{weekday}</Weekday>
     )
 }
 

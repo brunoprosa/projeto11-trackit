@@ -9,7 +9,7 @@ export default function WeekdaysCH({i, weekday, days, setDays}){
     }
 
     return(
-        <Weekday onClick={() => selecionar} selecionado={days.includes(i)}>{weekday}</Weekday>
+        <Weekday data-test="habit-day" onClick={() => selecionar} selecionado={days.includes(i)}>{weekday}</Weekday>
     )
 }
 

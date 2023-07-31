@@ -41,6 +41,7 @@ export default function Login(){
             <form onSubmit={logar}>
 
                 <input 
+                data-test="email-input"
                 type="email" 
                 placeholder="email" 
                 value={email} 
@@ -49,6 +50,7 @@ export default function Login(){
                 />
 
                 <input 
+                data-test="password-input"
                 type="password" 
                 placeholder="senha" 
                 value={senha} 
@@ -56,10 +58,10 @@ export default function Login(){
                 required 
                 />
 
-                <button type="submit">Entrar</button>
+                <button data-test="login-btn" type="submit">Entrar</button>
 
             </form>
-            <Link to="/cadastro">
+            <Link data-test="signup-link" to="/cadastro">
                 Não tem uma conta? Cadastre-se!
             </Link>
         </>

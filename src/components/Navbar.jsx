@@ -7,9 +7,9 @@ export default function Navbar(){
     const { foto } = useContext(PerfilContext)
 
     return(
-        <>
+        <div data-test="header">
             <img src={logo} />
-            <img src={foto} />
-        </>
+            <img data-test="avatar" src={foto} />
+        </div>
     )
 }
