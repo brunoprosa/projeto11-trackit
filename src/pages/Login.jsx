@@ -3,11 +3,13 @@ import { useNavigate, Link } from "react-router-dom"
 import { useState, useContext } from "react"
 import axios from "axios"
 import { TokenContext } from "../context/token"
+import { PerfilContext } from "../context/perfil"
 
 export default function Login(){
 
     const navigate = useNavigate()
     const {setToken} = useContext(TokenContext)
+    const {setFoto} = useContext(PerfilContext)
     
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
@@ -27,8 +29,10 @@ export default function Login(){
                     "Authorization": response.data.token
                 }
             })
+            setFoto(response.data.image)
             navigate('/hoje')
         })
+        promise.catch(response => alert(response))
     }
 
     return(
